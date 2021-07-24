@@ -1,0 +1,11 @@
+<h1>Categories</h1>
+
+<tbody>
+  <% @categories.each do |category| %>
+    <ul>
+      <li><%= link_to category.title, category_path(category) %>
+        <%= link_to 'delete category', category_path(category.id), method: :delete, class: 'float-right text-danger' %>
+      </li>
+    </ul>
+  <% end %>
+</tbody>
